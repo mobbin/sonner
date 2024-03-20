@@ -7,11 +7,17 @@
     "import": "./dist/index.mjs",
     "require": "./dist/index.js"
   },
+  "workspaces": [
+    ".",
+    "test",
+    "website"
+  ],
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
+    "prepack": "tsup src/index.tsx",
     "build": "tsup src/index.tsx",
     "dev": "tsup src/index.tsx --watch",
     "dev:website": "turbo run dev --filter=website...",
@@ -53,5 +59,5 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
-  "packageManager": "pnpm@6.32.11"
+  "packageManager": "yarn@4.1.1"
 }
