@@ -16,8 +16,8 @@
     "eslint-config-next": "13.2.4",
     "next": "13.4.19",
     "react": "18.2.0",
-    "sonner": "workspace:*",
     "react-dom": "18.2.0",
+    "sonner": "workspace:*",
     "typescript": "4.9.5"
   }
 }
