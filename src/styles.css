@@ -348,7 +348,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 720px) {
   [data-sonner-toaster] {
     position: fixed;
     --mobile-offset: 16px;
