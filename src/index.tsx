@@ -23,6 +23,7 @@ const VISIBLE_TOASTS_AMOUNT = 3;
 
 // Viewport padding
 const VIEWPORT_OFFSET = '32px';
+const MOBILE_VIEWPORT_OFFSET = '16px';
 
 // Default lifetime of a toasts (in ms)
 const TOAST_LIFETIME = 4000;
@@ -472,6 +473,7 @@ const Toaster = (props: ToasterProps) => {
     closeButton,
     className,
     offset,
+    mobileOffset,
     theme = 'light',
     richColors,
     duration,
@@ -635,6 +637,8 @@ const Toaster = (props: ToasterProps) => {
               {
                 '--front-toast-height': `${heights[0]?.height || 0}px`,
                 '--offset': typeof offset === 'number' ? `${offset}px` : offset || VIEWPORT_OFFSET,
+                '--mobile-offset':
+                  typeof mobileOffset === 'number' ? `${mobileOffset}px` : mobileOffset || MOBILE_VIEWPORT_OFFSET,
                 '--width': `${TOAST_WIDTH}px`,
                 '--gap': `${gap}px`,
                 ...style,
